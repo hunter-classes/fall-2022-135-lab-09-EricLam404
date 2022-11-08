@@ -5,7 +5,9 @@
 // add functions here
 
 double length(Coord3D *p){
-    return sqrt(pow(p->x, 2) + pow(p->y, 2) + pow(p->z, 2));
+    double square = sqrt(pow(p->x, 2) + pow(p->y, 2) + pow(p->z, 2));
+    int temp = (square * 10000) + 0.5;
+    return temp / 10000.0;
 }
 
 Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2){
